@@ -1,5 +1,13 @@
 package sudoku;
 
+/**
+ * 
+ * @author Tim
+ *
+ * A very basic timing class.
+ * 
+ */
+
 public class Stopwatch {
 	private long endTime;
 	private long startTime;
