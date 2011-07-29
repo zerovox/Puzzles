@@ -181,4 +181,21 @@ public class Grid {
 	public boolean equals(Grid x){
 		return (x.toString().equals(this.toString()));
 	}
+	
+	public String toGridString(){
+		String ret = "";
+		for(int i = 0; i < 81; i++){
+			if(i%27 == 0 && i != 0)
+				ret = ret + "\n------------";
+			if(i%3 == 0 && i%9 != 0 && i!=0)
+				ret = ret +"|";
+			if(i%9 == 0 && i!=0)
+				ret = ret +"\n";
+			if(rows[i/9][i%9].num() == 0)
+				ret = ret +" ";
+			else
+				ret = ret +rows[i/9][i%9].num();
+		}
+		return ret;
+	}
 }

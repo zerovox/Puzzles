@@ -11,7 +11,7 @@ public class Generate {
 			timer.start();
 			Grid y = generateStartGrids();
 			timer.stop();
-			Solve.printSquare(y.toString());
+			System.out.print(y.toGridString());
 			System.out.print("\n\nCreated in " + timer.inMillis()/1000 +" seconds.\n\n");
 		}
 	}

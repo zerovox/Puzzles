@@ -13,7 +13,7 @@ public class Solve {
 		
 		//Display the input neatly
 		System.out.println("Input sudoku:\n");
-		printSquare(x.toString());
+		System.out.print(x.toGridString());
 		
 		//Start timing
 		Stopwatch timer = new Stopwatch();
@@ -34,22 +34,7 @@ public class Solve {
 		} else {
 			System.out.println("No distict solution found after " + time +"."+ r + " seconds. Stuck at:\n");
 		}		
-		printSquare(x.toString());
-	}
-	
-	public static void printSquare(String out){
-		for(int i = 0; i < 81; i++){
-			if(i%27 == 0 && i != 0)
-				System.out.print("\n------------");
-			if(i%3 == 0 && i%9 != 0 && i!=0)
-				System.out.print("|");
-			if(i%9 == 0 && i!=0)
-				System.out.print("\n");
-			if(out.charAt(i) == 48)
-				System.out.print(" ");
-			else
-				System.out.print(out.charAt(i));
-		}
+		System.out.print(x.toGridString());
 	}
 
 }
