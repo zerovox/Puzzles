@@ -68,7 +68,7 @@ public class State {
 		return out;
 	}
 	
-	public int halfTheAverage(){
+	public int average(){
 		int total = 0;
 		for(int i = 0; i < 22; i++){
 			if(boxes[i]){
@@ -76,7 +76,11 @@ public class State {
 			}
 		}
 		
-		return (int) Math.round(total/(2*closed));
+		return (int) Math.round(total/(closed));
+	}
+	
+	public boolean isOpen(int i) {
+		return boxes[i];
 	}
 
 }
