@@ -2,3 +2,6 @@ This is my collection of scripts involving puzzles.
 
 /src/sudoku
 The first script is for solving and generating Sudokus. It isn't the prettiest of code, it messes with strings a lot to avoid keeping track of all the nodes and removing individual cells, instead creating new ones and throwing out the old bunch. This may be a little slower in generating sudokus, but solving them it takes 0.17 seconds rather consistently on this machine. 
+
+/src/deal
+A deal calculator for Deal or No Deal, I plan to add percentage chances of getting a higher offer if you no deal now, to give a good indication of which decision you should take.
