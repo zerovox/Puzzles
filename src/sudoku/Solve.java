@@ -8,7 +8,7 @@ public class Solve {
 			argss = args[0];
 		} else {
 			//Purely so I don't have to enter the sudoku as a string everytime I test this. Should replace with an error message.
-			//TODO: Add error message on no input.
+			//TODO: Add error message on no input. 
 			argss = "047701003860050210097020000000900300052000480006003000000090030028030946600800000";
 		}
 		

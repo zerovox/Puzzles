@@ -129,7 +129,7 @@ public class Grid {
 		if (fixed() == 81)
 			solved = true;
 		else
-			solved = false; //From here, a dfs could be attempted as some sudoku require a guess and test aproach
+			solved = false; //From here, a dfs could be attempted as some sudoku require a guess and test aproach 
 		return solved;
 		
 	}
