@@ -3,12 +3,26 @@ package sudoku;
 public class Solve {
 
 	public static void main(String[] args) {
-		String argss = "047701003860050210097020000000900300052000480006003000000090030028030946600800000";
+		String argss;
+		if(args.length > 0 && args[0].length() == 81) {
+			argss = args[0];
+		} else {
+			//Purely so I don't have to enter the sudoku as a string everytime I test this. Should replace with an error message.
+			//TODO: Add error message on no input.
+			argss = "047701003860050210097020000000900300052000480006003000000090030028030946600800000";
+		}
+		
 		int[] a = new int[81];
 		for(int i = 0; i<81; i++){
 			a[i] = argss.charAt(i) - 48;
 		}
-		Grid x = new Grid(a);
+		
+		solve(a);
+		
+	}
+	
+	public static void solve(int[] numbers) {
+		Grid x = new Grid(numbers);
 		
 		System.out.println("Input sudoku:\n");
 		System.out.print(x.toGridString());
@@ -30,5 +44,7 @@ public class Solve {
 		}		
 		System.out.print(x.toGridString());
 	}
+	
+	
 
 }
